@@ -3,4 +3,12 @@
     <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
     <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
 </nav>
+<div>
+    <button (click)="abrir()">Nuevo</button>
+</div>
+<div *ngIf="abierto">
+    <label>Nombre</label>
+    <input id="inputNuevoHeroe" #inputNuevoHeroe/>
+    <button (click)="aceptar(inputNuevoHeroe.value)">Aceptar</button> 
+</div>
 <router-outlet></router-outlet>
